@@ -1,0 +1,41 @@
+{
+  "name": "generator-hubot-script",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/desmondmorris/generator-hubot-script",
+  "bugs": "https://github.com/desmondmorris/generator-hubot-script/issues",
+  "author": {
+    "name": "Desmond Morris",
+    "email": "hi@desmondmorris.com",
+    "url": "https://github.com/desmondmorris"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/desmondmorris/generator-hubot-script.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
