@@ -5,10 +5,7 @@
   "author": "<%= userName %> <<%= userEmail %>>",
   "license": "MIT",
 
-  "keywords": [
-    "hubot",
-    "hubot-scripts"
-  ],
+  "keywords": <%= scriptKeywords %>,
 
   "repository": {
     "type": "git",

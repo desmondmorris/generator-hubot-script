@@ -6,13 +6,19 @@ var yeoman = require('yeoman-generator');
 var extractGeneratorName = function (_, appname) {
   var slugged = _.slugify(appname),
     match = slugged.match(/^generator-(.+)/);
-
   if (match && match.length === 2) {
     return match[1].toLowerCase();
   }
-
   return slugged;
 };
+
+var prepareKeywords = function(keywords) {
+  var ky = keywords.split(',');
+  for (i = 0; i < ky.length; ++i) {
+    ky[i] = '"' + ky[i].trim() + '"';
+  }
+  return '[' + ky.join(',') + ']';
+}
 
 var HubotScriptGenerator = module.exports = function HubotScriptGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -45,7 +51,7 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
       default: 'A hubot script that does the things'
     },
     {
-      name: 'npmKeywords',
+      name: 'scriptKeywords',
       message: 'Keywords',
       default: 'hubot, hubot-scripts'
     }
@@ -55,7 +61,7 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
   this.prompt(prompts, function (props) {
     this.scriptName = props.scriptName;
     this.scriptDescription = props.scriptDescription;
-    this.npmKeywords = props.npmKeywords.split(",");
+    this.scriptKeywords = prepareKeywords(props.scriptKeywords);
 
     cb();
   }.bind(this));
