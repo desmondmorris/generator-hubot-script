@@ -22,13 +22,23 @@ describe('hubot-script generator', function () {
   it('creates expected files', function (done) {
     var expected = [
       // add files you expect to exist here.
-      '.jshintrc',
-      '.editorconfig'
+      'script/bootstrap',
+      'script/test',
+      'src/hello-world.coffee',
+      'test/hello-world_test.coffee',
+      '.gitignore',
+      '.travis.yml',
+      'index.coffee',
+      'package.json',
+      'README.md'
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'scriptName': 'testScript',
+      'scriptDescription': 'testDescription',
+      'scriptKeywords': 'hubot, hubot-script'
     });
+
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       helpers.assertFiles(expected);
