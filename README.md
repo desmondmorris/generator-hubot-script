@@ -1,4 +1,6 @@
-# generator-hubot-script [![Build Status](https://secure.travis-ci.org/desmondmorris/generator-hubot-script.png?branch=master)](https://travis-ci.org/desmondmorris/generator-hubot-script)
+# Generator: Hubot Script [![Build Status](https://secure.travis-ci.org/desmondmorris/generator-hubot-script.png?branch=master)](https://travis-ci.org/desmondmorris/generator-hubot-script)
+
+####generator-hubot-script
 
 A generator for creating [Hubot](http://hubot.github.com) scripts.
 
