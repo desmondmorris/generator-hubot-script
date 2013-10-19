@@ -1,6 +1,6 @@
 {
   "name": "generator-hubot-script",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
@@ -35,7 +35,8 @@
   },
   "licenses": [
     {
-      "type": "MIT"
+      "type": "MIT",
+      "url": "https://raw.github.com/desmondmorris/generator-hubot-script/master/LICENSE"
     }
   ]
 }
