@@ -82,7 +82,7 @@ HubotScriptGenerator.prototype.app = function app() {
   this.mkdir('test');
   this.copy('test/hello-world_test_coffee', 'test/hello-world_test.coffee');
 
-  this.copy('.gitignore', '.gitignore');
+  this.copy('gitignore', '.gitignore');
   this.copy('.travis.yml', '.travis.yml');
   this.copy('index.coffee.dist', 'index.coffee');
   this.copy('_package.json', 'package.json');
