@@ -13,6 +13,9 @@ A generator for creating [Hubot](http://hubot.github.com) scripts.
 ## Usage
 - `yo hubot-script`
 
+## Changelog
+- 1.0.1 - Introduces Grunt task runner.  Mocha tests are now run via Grunt (grunt test)
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
