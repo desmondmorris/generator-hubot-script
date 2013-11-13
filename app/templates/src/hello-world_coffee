@@ -1,5 +1,5 @@
 # Description
-#   A Hubot script for hello'ing the world.
+#   <%= scriptDescription %>
 #
 # Configuration:
 #   LIST_OF_ENV_VARS_TO_SET
@@ -12,7 +12,7 @@
 #   <optional notes required for the script>
 #
 # Author:
-#   <github_username>[@<org>]
+#   <%= userName %>[@<org>]
 
 module.exports = (robot) ->
   robot.respond /hello/, (msg) ->
