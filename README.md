@@ -17,6 +17,7 @@ A generator for creating [Hubot](http://hubot.github.com) scripts.
 - 1.0.1 - Introduces Grunt task runner.  Mocha tests are now run via Grunt (grunt test)
 - 1.0.2 - Adds Tomdoc documentation to source file template
 - 1.0.3 - Removes underscores from src & test files
+- 1.0.4 - Adds grunt support for generated hubot
 
 ## License
 
