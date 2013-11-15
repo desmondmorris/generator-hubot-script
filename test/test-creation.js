@@ -28,6 +28,7 @@ describe('hubot-script generator', function () {
       'test/hello-world-test.coffee',
       '.gitignore',
       '.travis.yml',
+      'Gruntfile.js',
       'index.coffee',
       'package.json',
       'README.md'
