@@ -24,12 +24,15 @@
     "mocha": "*",
     "chai": "*",
     "sinon-chai": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "grunt-mocha-test": "~0.7.0",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.3"
   },
 
   "main": "index.coffee",
 
   "scripts": {
-    "test": "script/test"
+    "test": "grunt test"
   }
 }
