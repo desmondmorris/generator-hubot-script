@@ -25,7 +25,7 @@ describe('hubot-script generator', function () {
       'script/bootstrap',
       'script/test',
       'src/hello-world.coffee',
-      'test/hello-world_test.coffee',
+      'test/hello-world-test.coffee',
       '.gitignore',
       '.travis.yml',
       'index.coffee',
