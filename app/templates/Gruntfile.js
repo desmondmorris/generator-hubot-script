@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-release');
 
   grunt.initConfig({
     mochaTest: {
@@ -12,6 +13,12 @@ module.exports = function(grunt) {
           require: 'coffee-script'
         },
         src: ['test/**/*.coffee']
+      }
+    },
+    release: {
+      options: {
+        tagName: 'v<%= version %>',
+        commitMessage: 'Prepared to release <%= version %>.'
       }
     },
     watch: {
