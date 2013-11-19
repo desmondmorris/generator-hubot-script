@@ -2,9 +2,11 @@
 
 <%= scriptDescription %>
 
-## Commands
+See [`src/hello-world.coffee`](src/hello-world.coffee) for full documentation.
+
+## Sample Interaction
 
 ```
-hubot hello
-hubot orly
+user1>> hubot hello
+hubot>> hello!
 ```
