@@ -18,6 +18,11 @@ A generator for creating [Hubot](http://hubot.github.com) scripts.
 - 1.0.2 - Adds Tomdoc documentation to source file template
 - 1.0.3 - Removes underscores from src & test files
 - 1.0.4 - Adds grunt support for generated hubot
+- 1.0.5 - Added grunt-release and better documentation for generated hubot
+
+## Contributors
+- Desmond Morris - @desmondmorris
+- Patrick Connolly - @patcon
 
 ## License
 
