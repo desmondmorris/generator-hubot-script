@@ -12,15 +12,15 @@ Add **hubot-<%= scriptName %>** to your `package.json` file:
 "dependencies": {
   "hubot": ">= 2.5.1",
   "hubot-scripts": ">= 2.4.2",
-  "hubot-<%= scriptName %>": ">= 1.0.0",
+  "<%= scriptName %>": ">= 0.0.0",
   "hubot-hipchat": "~2.5.1-5",
 }
 ```
 
-Add **hubot-<%= scriptName %>** to your `external-scripts.json`:
+Add **<%= scriptName %>** to your `external-scripts.json`:
 
 ```json
-["hubot-<%= scriptName %>"]
+["<%= scriptName %>"]
 ```
 
 Run `npm install`
