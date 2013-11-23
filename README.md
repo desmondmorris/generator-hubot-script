@@ -19,7 +19,8 @@ A generator for creating [Hubot](http://hubot.github.com) scripts.
 - 1.0.3 - Removes underscores from src & test files
 - 1.0.4 - Adds grunt support for generated hubot
 - 1.0.5 - Added grunt-release and better documentation for generated hubot
-- 1.0.6 - Added installation instructions to readme template
+- 1.0.6 - Added installation instructions to readme template.
+- 1.0.7 - Removes "hubot" prefix in template documentation.
 
 ## Contributors
 - Desmond Morris - @desmondmorris
