@@ -6,7 +6,7 @@ See [`src/hello-world.coffee`](src/hello-world.coffee) for full documentation.
 
 ## Installation
 
-Add **hubot-<%= scriptName %>** to your `package.json` file:
+Add **<%= scriptName %>** to your `package.json` file:
 
 ```json
 "dependencies": {
