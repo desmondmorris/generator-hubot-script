@@ -59,7 +59,7 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
 
 
   this.prompt(prompts, function (props) {
-    this.scriptName = props.scriptName;
+    this.scriptName = this._.slugify(props.scriptName);
     this.scriptDescription = props.scriptDescription;
     this.scriptKeywords = prepareKeywords(props.scriptKeywords);
 

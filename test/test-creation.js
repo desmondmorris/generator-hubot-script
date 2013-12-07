@@ -24,8 +24,8 @@ describe('hubot-script generator', function () {
       // add files you expect to exist here.
       'script/bootstrap',
       'script/test',
-      'src/testScript.coffee',
-      'test/testScript-test.coffee',
+      'src/testscript.coffee',
+      'test/testscript-test.coffee',
       '.gitignore',
       '.travis.yml',
       'Gruntfile.js',
