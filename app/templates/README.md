@@ -2,7 +2,7 @@
 
 <%= scriptDescription %>
 
-See [`src/hello-world.coffee`](src/hello-world.coffee) for full documentation.
+See [`src/<%= scriptName %>.coffee`](src/<%= scriptName %>.coffee) for full documentation.
 
 ## Installation
 

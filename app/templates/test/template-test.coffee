@@ -10,7 +10,7 @@ describe 'hello-world', ->
       respond: sinon.spy()
       hear: sinon.spy()
 
-    require('../src/hello-world')(@robot)
+    require('../src/<%= scriptName %>')(@robot)
 
   it 'registers a respond listener', ->
     expect(@robot.respond).to.have.been.calledWith(/hello/)
