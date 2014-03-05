@@ -59,7 +59,17 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
 
 
   this.prompt(prompts, function (props) {
-    this.scriptName = this._.slugify(props.scriptName);
+    var prefix = "hubot-";
+
+    this.name = this.scriptName = this._.slugify(props.scriptName);
+
+    if (this.name.substring(0, 6) == prefix) {
+      this.name = this.name.substring(6);
+    }
+    else {
+      this.scriptName = prefix + this.scriptName;
+    }
+
     this.scriptDescription = props.scriptDescription;
     this.scriptKeywords = prepareKeywords(props.scriptKeywords);
 
@@ -77,10 +87,10 @@ HubotScriptGenerator.prototype.app = function app() {
   this.copy('script/test', 'script/test');
 
   this.mkdir('src');
-  this.copy('src/template.coffee', 'src/' + this.scriptName + '.coffee');
+  this.copy('src/template.coffee', 'src/' + this.name + '.coffee');
 
   this.mkdir('test');
-  this.copy('test/template-test.coffee', 'test/' + this.scriptName + '-test.coffee');
+  this.copy('test/template-test.coffee', 'test/' + this.name + '-test.coffee');
 
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('gitignore', '.gitignore');

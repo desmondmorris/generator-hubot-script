@@ -1,8 +1,8 @@
-# Hubot: <%= scriptName %>
+# Hubot: <%= name %>
 
 <%= scriptDescription %>
 
-See [`src/<%= scriptName %>.coffee`](src/<%= scriptName %>.coffee) for full documentation.
+See [`src/<%= name %>.coffee`](src/<%= name %>.coffee) for full documentation.
 
 ## Installation
 
