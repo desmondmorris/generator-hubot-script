@@ -6,24 +6,15 @@ See [`src/hello-world.coffee`](src/hello-world.coffee) for full documentation.
 
 ## Installation
 
-Add **<%= scriptName %>** to your `package.json` file:
+In hubot project repo, run:
 
-```json
-"dependencies": {
-  "hubot": ">= 2.5.1",
-  "hubot-scripts": ">= 2.4.2",
-  "<%= scriptName %>": ">= 0.0.0",
-  "hubot-hipchat": "~2.5.1-5",
-}
-```
+`npm install <%= scriptName %> --save`
 
-Add **<%= scriptName %>** to your `external-scripts.json`:
+Then add **<%= scriptName %>** to your `external-scripts.json`:
 
 ```json
 ["<%= scriptName %>"]
 ```
-
-Run `npm install`
 
 ## Sample Interaction
 
