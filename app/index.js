@@ -3,9 +3,9 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 
-var extractGeneratorName = function (_, appname) {
+var extractScriptName = function (_, appname) {
   var slugged = _.slugify(appname),
-    match = slugged.match(/^generator-(.+)/);
+    match = slugged.match(/^hubot-(.+)/);
   if (match && match.length === 2) {
     return match[1].toLowerCase();
   }
@@ -33,8 +33,8 @@ var HubotScriptGenerator = module.exports = function HubotScriptGenerator(args, 
 util.inherits(HubotScriptGenerator, yeoman.generators.Base);
 
 HubotScriptGenerator.prototype.askFor = function askFor() {
-  var cb = this.async();
-  var generatorName = extractGeneratorName(this._, this.appname);
+  var done = this.async();
+  var scriptName = extractScriptName(this._, this.appname);
 
   // have Yeoman greet the user.
   //console.log(this.yeoman);
@@ -42,8 +42,8 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
   var prompts = [
     {
       name: 'scriptName',
-      message: 'Name',
-      default: generatorName
+      message: 'Base name of script',
+      default: scriptName
     },
     {
       name: 'scriptDescription',
@@ -59,21 +59,12 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
 
 
   this.prompt(prompts, function (props) {
-    var prefix = "hubot-";
-
-    this.name = this.scriptName = this._.slugify(props.scriptName);
-
-    if (this.name.substring(0, 6) == prefix) {
-      this.name = this.name.substring(6);
-    }
-    else {
-      this.scriptName = prefix + this.scriptName;
-    }
-
+    this.scriptName = props.scriptName;
+    this.appname = 'hubot-' + this.scriptName;
     this.scriptDescription = props.scriptDescription;
     this.scriptKeywords = prepareKeywords(props.scriptKeywords);
 
-    cb();
+    done();
   }.bind(this));
 };
 
@@ -87,10 +78,10 @@ HubotScriptGenerator.prototype.app = function app() {
   this.copy('script/test', 'script/test');
 
   this.mkdir('src');
-  this.copy('src/template.coffee', 'src/' + this.name + '.coffee');
+  this.copy('src/template.coffee', 'src/' + this.scriptName + '.coffee');
 
   this.mkdir('test');
-  this.copy('test/template-test.coffee', 'test/' + this.name + '-test.coffee');
+  this.copy('test/template-test.coffee', 'test/' + this.scriptName + '-test.coffee');
 
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('gitignore', '.gitignore');

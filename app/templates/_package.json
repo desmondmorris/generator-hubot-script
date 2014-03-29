@@ -1,5 +1,5 @@
 {
-  "name": "<%= scriptName %>",
+  "name": "<%= appname %>",
   "description": "<%= scriptDescription %>",
   "version": "0.0.0",
   "author": "<%= userName %> <<%= userEmail %>>",
@@ -9,11 +9,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-example.git"
+    "url": "git://github.com/hubot-scripts/<%= appname %>.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-example/issues"
+    "url": "https://github.com/hubot-scripts/<%= appname %>/issues"
   },
 
   "dependencies": {
