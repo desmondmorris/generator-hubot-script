@@ -1,19 +1,19 @@
-# Hubot: <%= scriptName %>
+# <%= appname %>
 
 <%= scriptDescription %>
 
-See [`src/hello-world.coffee`](src/hello-world.coffee) for full documentation.
+See [`src/<%= scriptName %>.coffee`](src/<%= scriptName %>.coffee) for full documentation.
 
 ## Installation
 
 In hubot project repo, run:
 
-`npm install <%= scriptName %> --save`
+`npm install <%= appname %> --save`
 
-Then add **<%= scriptName %>** to your `external-scripts.json`:
+Then add **<%= appname %>** to your `external-scripts.json`:
 
 ```json
-["<%= scriptName %>"]
+["<%= appname %>"]
 ```
 
 ## Sample Interaction
