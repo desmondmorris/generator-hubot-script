@@ -27,6 +27,12 @@ A generator for creating [Hubot](http://hubot.github.com) scripts.
 - Patrick Connolly - @patcon
 - Dan Riti - @danriti
 
+## Releasing
+
+To increment version, tag and release to GitHub and npmjs.org:
+
+- `grunt release[:patch|:minor|:major]`
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)

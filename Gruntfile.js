@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
+  grunt.loadNpmTasks('grunt-release');
 
   grunt.initConfig({
     mochacli: {
@@ -9,6 +10,12 @@ module.exports = function(grunt) {
         bail: true
       },
       all: ['test/**/*.js']
+    },
+    release: {
+      options: {
+        tagName: 'v<%= version %>',
+        commitMessage: 'Prepare to release <%= version %>.'
+      }
     },
     watch: {
       files: ['Gruntfile.js', 'test/**/*.js'],
