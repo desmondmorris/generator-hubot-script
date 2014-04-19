@@ -1,6 +1,6 @@
 {
   "name": "generator-hubot-script",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
