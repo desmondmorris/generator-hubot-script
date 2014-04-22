@@ -32,18 +32,27 @@ var HubotScriptGenerator = module.exports = function HubotScriptGenerator(args, 
 
 util.inherits(HubotScriptGenerator, yeoman.generators.Base);
 
+HubotScriptGenerator.prototype.defaults = function defaults() {
+  this.argument('inputName', { type: String, required: false });
+
+  if (!!this.inputName) {
+    this.createDir = true;
+  }
+};
+
 HubotScriptGenerator.prototype.askFor = function askFor() {
   var done = this.async();
-  var scriptName = extractScriptName(this._, this.appname);
-
-  // have Yeoman greet the user.
-  //console.log(this.yeoman);
+  var createDir = this.createDir;
+  var scriptName = extractScriptName(this._, this.inputName);
 
   var prompts = [
     {
       name: 'scriptName',
       message: 'Base name of script',
-      default: scriptName
+      default: extractScriptName(this._, this.appname),
+      when: function() {
+        return !createDir;
+      }
     },
     {
       name: 'scriptDescription',
@@ -59,13 +68,19 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
 
 
   this.prompt(prompts, function (props) {
-    this.scriptName = props.scriptName.toLowerCase();
+    this.scriptName = (!!props.scriptName ? props.scriptName : scriptName);
     this.appname = 'hubot-' + this.scriptName;
     this.scriptDescription = props.scriptDescription;
     this.scriptKeywords = prepareKeywords(props.scriptKeywords);
 
     done();
   }.bind(this));
+};
+
+HubotScriptGenerator.prototype.root = function root() {
+  if (!!this.createDir) {
+    this.destinationRoot(this.appname);
+  }
 };
 
 HubotScriptGenerator.prototype.app = function app() {
