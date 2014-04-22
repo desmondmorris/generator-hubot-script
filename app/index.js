@@ -43,7 +43,6 @@ HubotScriptGenerator.prototype.defaults = function defaults() {
 HubotScriptGenerator.prototype.askFor = function askFor() {
   var done = this.async();
   var createDir = this.createDir;
-  var scriptName = extractScriptName(this._, this.inputName);
 
   var prompts = [
     {
@@ -68,7 +67,11 @@ HubotScriptGenerator.prototype.askFor = function askFor() {
 
 
   this.prompt(prompts, function (props) {
-    this.scriptName = (!!props.scriptName ? props.scriptName : scriptName);
+    if (!!props.scriptName) {
+      this.scriptName = props.scriptName;
+    } else {
+      this.scriptName = extractScriptName(this._, this.inputName);
+    }
     this.appname = 'hubot-' + this.scriptName;
     this.scriptDescription = props.scriptDescription;
     this.scriptKeywords = prepareKeywords(props.scriptKeywords);
