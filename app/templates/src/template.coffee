@@ -15,8 +15,8 @@
 #   <%= userName %>[@<org>]
 
 module.exports = (robot) ->
-  robot.respond /hello/, (msg) ->
+  robot.respond /hello/i, (msg) ->
     msg.reply "hello!"
 
-  robot.hear /orly/, ->
+  robot.hear /orly/i, (msg) ->
     msg.send "yarly"
