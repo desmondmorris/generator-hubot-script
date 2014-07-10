@@ -4,6 +4,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-release');
 
   grunt.initConfig({
+    clean: ["test/temp"],
     mochacli: {
       options: {
         reporter: 'spec',
@@ -30,7 +31,7 @@ module.exports = function(grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('test', ['mochacli']);
+  grunt.registerTask('test', ['clean', 'mochacli']);
   grunt.registerTask('test:watch', ['watch']);
   grunt.registerTask('default', ['test']);
 };
