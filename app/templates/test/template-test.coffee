@@ -1,6 +1,7 @@
 chai = require 'chai'
-sinon  = require 'sinon'
+sinon = require 'sinon'
 chai.use require 'sinon-chai'
+
 expect = chai.expect
 
 Robot       = require 'hubot/src/robot'
