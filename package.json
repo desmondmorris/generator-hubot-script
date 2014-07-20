@@ -21,7 +21,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "yeoman-generator": "~0.13.0"
+    "yeoman-generator": "~0.17.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
