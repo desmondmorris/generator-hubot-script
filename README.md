@@ -11,7 +11,7 @@ A generator for creating [Hubot](http://hubot.github.com) scripts.
 - `npm install -g generator-hubot-script`
 
 ## Usage
-- `yo hubot-script`
+- `yo hubot-script [<script name>]`
 
 ## Changelog
 - 1.0.1 - Introduces Grunt task runner.  Mocha tests are now run via Grunt (grunt test)
